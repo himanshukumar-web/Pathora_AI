@@ -75,6 +75,7 @@ class DetectorService {
             category: topCategory.categoryName,
             labelEn: meta.en,
             labelHi: meta.hi,
+            labelHinglish: meta.hinglish,
             score: topCategory.score,
             box: {
               originX: box.originX,

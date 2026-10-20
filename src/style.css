@@ -483,6 +483,242 @@ body {
   gap: 0.75rem;
 }
 
+/* Voice Actions Toolbar */
+.voice-actions-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-voice-tool {
+  flex: 1;
+  min-width: 140px;
+  min-height: 48px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.btn-voice-tool:hover {
+  background-color: var(--bg-card);
+  border-color: var(--accent-cyan);
+}
+
+.btn-voice-tool:focus-visible {
+  outline: 3px solid var(--accent-cyan-light);
+  outline-offset: 2px;
+}
+
+.btn-voice-tool.muted-tool {
+  border-color: var(--accent-rose);
+  color: var(--accent-rose);
+}
+
+.btn-tool-text {
+  white-space: nowrap;
+}
+
+.btn-kbd-hint {
+  font-size: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--text-muted);
+}
+
+/* Voice & Accessibility Settings Card */
+.voice-settings-card {
+  position: relative;
+}
+
+.btn-toggle-settings {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-toggle-settings:hover {
+  color: #ffffff;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.setting-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.setting-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vol-percent {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--accent-cyan-light);
+}
+
+/* 3-Language Choice Buttons in Settings */
+.lang-buttons-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.btn-choice {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.6rem 0.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 54px;
+  transition: all 0.2s ease;
+}
+
+.btn-choice span {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.btn-choice small {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.btn-choice:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--accent-cyan-light);
+}
+
+.btn-choice.selected {
+  background-color: rgba(2, 132, 199, 0.2);
+  border-color: var(--accent-cyan-light);
+  color: #38bdf8;
+}
+
+.btn-choice.selected small {
+  color: #93c5fd;
+}
+
+/* Voice Dropdown */
+.voice-select-dropdown {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.voice-select-dropdown:focus {
+  border-color: var(--accent-cyan-light);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+.voice-select-dropdown option,
+.voice-select-dropdown optgroup {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+/* Speed Selector */
+.speed-buttons-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.btn-speed {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.55rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  min-height: 44px;
+  transition: all 0.2s ease;
+}
+
+.btn-speed:hover {
+  background-color: var(--bg-card-hover);
+}
+
+.btn-speed.selected {
+  background-color: var(--accent-cyan);
+  border-color: var(--accent-cyan-light);
+  color: #ffffff;
+}
+
+/* Volume range slider */
+.volume-slider {
+  width: 100%;
+  accent-color: var(--accent-cyan-light);
+  height: 6px;
+  cursor: pointer;
+}
+
+/* Shortcuts info box */
+.shortcuts-info {
+  margin-top: 0.25rem;
+  padding: 0.65rem 0.85rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.shortcuts-info strong {
+  color: var(--text-main);
+}
+
 /* Footer */
 .app-footer {
   text-align: center;
